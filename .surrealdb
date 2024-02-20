@@ -1,0 +1,9 @@
+[core]
+    path: surrealdb
+
+[db]
+    address = "ws://surrealdb:8000/"
+    username = "root"
+    password = "root"
+    ns = "app"
+    db = "app"

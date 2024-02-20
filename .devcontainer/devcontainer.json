@@ -1,0 +1,36 @@
+{
+    "name": "Test Api",
+    "dockerComposeFile": [
+      "./docker-compose.yml"
+    ],
+    "service": "app",
+    "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        "dockerDashComposeVersion": "none"
+      }
+    },
+    "extensions": [
+      "rust-lang.rust-analyzer",
+      "ms-vscode.makefile-tools",
+      "EditorConfig.EditorConfig",
+      "redhat.vscode-yaml",
+      "bruno-api-client.bruno",
+      "yzhang.markdown-all-in-one",
+      "streetsidesoftware.code-spell-checker-german",
+      "GitHub.copilot",
+      "github.vscode-github-actions",
+      "surrealdb.surrealql"
+    ],
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "mounts": [
+      {
+        "source": "devcontainer-cargo-cache-${devcontainerId}",
+        "target": "/usr/local/cargo",
+        "type": "volume"
+      }
+    ],
+    "remoteUser": "root",
+    "workspaceFolder": "/usr/src/app"
+  }
